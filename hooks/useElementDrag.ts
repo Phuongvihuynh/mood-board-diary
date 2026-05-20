@@ -10,7 +10,6 @@ export function useElementDrag(elementId: string) {
   const onPointerDown = useCallback(
     (e: React.PointerEvent) => {
       e.stopPropagation();
-      e.preventDefault();
       const el = useBoardStore.getState().board?.elements.find((e) => e.id === elementId);
       if (!el) return;
 

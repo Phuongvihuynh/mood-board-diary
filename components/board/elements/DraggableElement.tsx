@@ -88,6 +88,7 @@ export function DraggableElement({ element, children }: DraggableElementProps) {
           {/* Delete button */}
           <button
             className="absolute -top-3 -right-3 w-6 h-6 bg-red-100 text-red-600 rounded-full flex items-center justify-center text-xs cursor-pointer hover:bg-red-200 border border-red-300"
+            onPointerDown={(e) => e.stopPropagation()}
             onClick={(e) => {
               e.stopPropagation();
               deleteElement(element.id);
@@ -99,6 +100,7 @@ export function DraggableElement({ element, children }: DraggableElementProps) {
           {/* Duplicate button */}
           <button
             className="absolute -bottom-3 -right-3 w-6 h-6 bg-lavender text-foreground rounded-full flex items-center justify-center text-xs cursor-pointer hover:bg-lavender/80 border border-lavender"
+            onPointerDown={(e) => e.stopPropagation()}
             onClick={(e) => {
               e.stopPropagation();
               duplicateElement(element.id);
