@@ -1,26 +1,75 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --background: #FFF8F0;
+  --foreground: #1a1a2e;
+  --cream: #FFF8F0;
+  --blush: #FFE4E1;
+  --lavender: #E8DFF5;
+  --sage: #D4E2D4;
+  --warm-pink: #E8A0BF;
+  --soft-brown: #C4A882;
+  --parchment: #F5E6D3;
+  --rose-dust: #D4A5A5;
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+  --color-cream: var(--cream);
+  --color-blush: var(--blush);
+  --color-lavender: var(--lavender);
+  --color-sage: var(--sage);
+  --color-warm-pink: var(--warm-pink);
+  --color-soft-brown: var(--soft-brown);
+  --color-parchment: var(--parchment);
+  --color-rose-dust: var(--rose-dust);
+  --font-caveat: var(--font-caveat);
+  --font-indie-flower: var(--font-indie-flower);
+  --font-kalam: var(--font-kalam);
+  --font-dancing-script: var(--font-dancing-script);
+  --font-patrick-hand: var(--font-patrick-hand);
+  --font-gloria-hallelujah: var(--font-gloria-hallelujah);
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-kalam), 'Kalam', cursive;
+}
+
+/* Background patterns */
+.pattern-dots {
+  background-image: radial-gradient(circle, currentColor 1px, transparent 1px);
+  background-size: 20px 20px;
+}
+
+.pattern-grid {
+  background-image:
+    linear-gradient(currentColor 1px, transparent 1px),
+    linear-gradient(90deg, currentColor 1px, transparent 1px);
+  background-size: 20px 20px;
+}
+
+.pattern-lines {
+  background-image: linear-gradient(currentColor 1px, transparent 1px);
+  background-size: 20px 20px;
+}
+
+/* Scrollbar styling */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--soft-brown);
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--rose-dust);
 }

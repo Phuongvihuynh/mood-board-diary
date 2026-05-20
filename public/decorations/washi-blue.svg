@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 40" width="200" height="40">
+  <defs>
+    <pattern id="blue-stripes" x="0" y="0" width="6" height="6" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
+      <rect x="0" y="0" width="2.5" height="6" fill="#6BB8E8" opacity="0.3"/>
+    </pattern>
+    <clipPath id="blue-torn-edges">
+      <path d="
+        M3,2 Q7,0 11,3 Q15,1 19,2 Q23,0 27,4 Q31,1 35,2 Q39,0 43,3
+        Q47,1 51,2 Q55,4 59,1 Q63,3 67,2 Q71,0 75,3 Q79,1 83,2
+        Q87,0 91,3 Q95,1 99,4 Q103,1 107,2 Q111,0 115,3 Q119,1 123,2
+        Q127,4 131,1 Q135,3 139,2 Q143,0 147,3 Q151,1 155,2 Q159,0 163,3
+        Q167,1 171,4 Q175,1 179,2 Q183,0 187,3 Q191,1 195,2 Q198,0 200,2
+        L200,38 Q197,40 193,37 Q189,39 185,38 Q181,40 177,37 Q173,39 169,38
+        Q165,36 161,39 Q157,37 153,38 Q149,40 145,37 Q141,39 137,38
+        Q133,40 129,37 Q125,39 121,38 Q117,36 113,39 Q109,37 105,38
+        Q101,40 97,37 Q93,39 89,38 Q85,36 81,39 Q77,37 73,38
+        Q69,40 65,37 Q61,39 57,38 Q53,40 49,37 Q45,39 41,38
+        Q37,36 33,39 Q29,37 25,38 Q21,40 17,37 Q13,39 9,38 Q5,36 3,39 Z
+      "/>
+    </clipPath>
+  </defs>
+  <g clip-path="url(#blue-torn-edges)">
+    <rect x="0" y="0" width="200" height="40" fill="#89CFF0" opacity="0.7"/>
+    <rect x="0" y="13" width="200" height="14" fill="#89CFF0" opacity="0.15"/>
+    <!-- Stripe pattern -->
+    <rect x="0" y="0" width="200" height="40" fill="url(#blue-stripes)"/>
+    <!-- Sheen -->
+    <rect x="0" y="8" width="200" height="3" fill="white" opacity="0.18"/>
+  </g>
+</svg>

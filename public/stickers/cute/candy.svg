@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" fill="none">
+  <!-- Left wrapper -->
+  <path d="M10 32C10 32 14 24 18 26C18 26 14 30 14 32C14 34 18 38 18 38C14 40 10 32 10 32Z" fill="#FFE4E1"/>
+  <path d="M10 32L6 28" stroke="#E8A0BF" stroke-width="2" stroke-linecap="round"/>
+  <path d="M10 32L5 34" stroke="#E8A0BF" stroke-width="2" stroke-linecap="round"/>
+  <!-- Right wrapper -->
+  <path d="M54 32C54 32 50 24 46 26C46 26 50 30 50 32C50 34 46 38 46 38C50 40 54 32 54 32Z" fill="#FFE4E1"/>
+  <path d="M54 32L58 28" stroke="#E8A0BF" stroke-width="2" stroke-linecap="round"/>
+  <path d="M54 32L59 34" stroke="#E8A0BF" stroke-width="2" stroke-linecap="round"/>
+  <!-- Candy body -->
+  <ellipse cx="32" cy="32" rx="16" ry="12" fill="#E8A0BF"/>
+  <!-- Stripes -->
+  <path d="M24 22C24 22 28 42 24 42" stroke="#FFE4E1" stroke-width="3" stroke-linecap="round" opacity="0.6"/>
+  <path d="M32 20C32 20 36 44 32 44" stroke="#FFE4E1" stroke-width="3" stroke-linecap="round" opacity="0.6"/>
+  <path d="M40 22C40 22 44 42 40 42" stroke="#FFE4E1" stroke-width="3" stroke-linecap="round" opacity="0.6"/>
+  <!-- Highlight -->
+  <ellipse cx="28" cy="27" rx="4" ry="2.5" fill="white" opacity="0.35"/>
+</svg>

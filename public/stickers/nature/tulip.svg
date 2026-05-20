@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" fill="none">
+  <!-- Stem -->
+  <path d="M32 34V58" stroke="#D4E2D4" stroke-width="3" stroke-linecap="round"/>
+  <!-- Leaves -->
+  <path d="M32 46C32 46 18 40 16 46C14 52 28 48 32 46Z" fill="#D4E2D4"/>
+  <path d="M32 50C32 50 46 44 48 50C50 56 36 52 32 50Z" fill="#D4E2D4"/>
+  <!-- Tulip petals -->
+  <path d="M20 28C20 12 28 6 32 6C36 6 44 12 44 28C44 34 38 36 32 36C26 36 20 34 20 28Z" fill="#FF6B6B"/>
+  <!-- Inner petal lines -->
+  <path d="M26 30C26 16 30 10 32 10" stroke="#FFE4E1" stroke-width="1.5" fill="none" opacity="0.5"/>
+  <path d="M38 30C38 16 34 10 32 10" stroke="#FFE4E1" stroke-width="1.5" fill="none" opacity="0.5"/>
+  <!-- Highlight -->
+  <path d="M26 18C26 18 28 12 30 12" stroke="white" stroke-width="2" stroke-linecap="round" opacity="0.35"/>
+</svg>

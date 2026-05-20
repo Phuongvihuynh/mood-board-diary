@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 80" width="30" height="80">
+  <defs>
+    <linearGradient id="rose-grad" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#C08E8E"/>
+      <stop offset="40%" stop-color="#DBBABA"/>
+      <stop offset="60%" stop-color="#D4A5A5"/>
+      <stop offset="100%" stop-color="#B88E8E"/>
+    </linearGradient>
+  </defs>
+  <!-- Outer wire loop -->
+  <path d="
+    M10,5
+    Q10,2 15,2
+    Q20,2 20,5
+    L20,65
+    Q20,73 15,73
+    Q10,73 10,65
+    L10,20
+    Q10,14 15,14
+    Q20,14 20,20
+    L20,55
+    Q20,60 15,60
+    Q10,60 10,55
+    L10,20
+  "
+  fill="none"
+  stroke="url(#rose-grad)"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"/>
+  <!-- Highlight on the wire for 3D effect -->
+  <path d="
+    M10,5
+    Q10,2 15,2
+    Q20,2 20,5
+    L20,30
+  "
+  fill="none"
+  stroke="white"
+  stroke-width="0.6"
+  stroke-linecap="round"
+  opacity="0.35"/>
+</svg>
