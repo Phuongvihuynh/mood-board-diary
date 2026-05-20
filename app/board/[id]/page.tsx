@@ -62,7 +62,7 @@ export default function BoardEditorPage({
 
   if (!loaded || !board) {
     return (
-      <div className="min-h-screen bg-cream flex items-center justify-center">
+      <div className="min-h-screen bg-background flex items-center justify-center">
         <div className="text-soft-brown font-kalam text-lg animate-pulse">
           Loading your board...
         </div>
@@ -72,7 +72,7 @@ export default function BoardEditorPage({
 
   return (
     <PageTransition>
-      <div className="h-screen flex flex-col bg-cream overflow-hidden">
+      <div className="h-screen flex flex-col bg-background overflow-hidden">
         <BoardToolbar boardId={id} onExport={handleExport} />
 
         <div className="flex-1 flex overflow-hidden">
