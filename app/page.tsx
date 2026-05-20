@@ -34,7 +34,7 @@ export default function DashboardPage() {
 
   return (
     <PageTransition>
-      <div className="min-h-screen bg-cream">
+      <div className="min-h-screen bg-background">
         {/* Header */}
         <header className="px-6 py-8 text-center">
           <h1 className="text-4xl font-bold font-dancing-script text-foreground">
