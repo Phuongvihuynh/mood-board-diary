@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" fill="none">
+  <!-- Stem -->
+  <path d="M32 40V60" stroke="#D4E2D4" stroke-width="2.5" stroke-linecap="round"/>
+  <!-- Leaf -->
+  <path d="M32 52C32 52 24 48 22 52C20 56 28 54 32 52Z" fill="#D4E2D4"/>
+  <!-- Petals (white) -->
+  <ellipse cx="32" cy="16" rx="4" ry="9" fill="white"/>
+  <ellipse cx="32" cy="16" rx="4" ry="9" fill="white" transform="rotate(45 32 28)"/>
+  <ellipse cx="32" cy="16" rx="4" ry="9" fill="white" transform="rotate(90 32 28)"/>
+  <ellipse cx="32" cy="16" rx="4" ry="9" fill="white" transform="rotate(135 32 28)"/>
+  <ellipse cx="32" cy="16" rx="4" ry="9" fill="white" transform="rotate(180 32 28)"/>
+  <ellipse cx="32" cy="16" rx="4" ry="9" fill="white" transform="rotate(225 32 28)"/>
+  <ellipse cx="32" cy="16" rx="4" ry="9" fill="white" transform="rotate(270 32 28)"/>
+  <ellipse cx="32" cy="16" rx="4" ry="9" fill="white" transform="rotate(315 32 28)"/>
+  <!-- Petal outlines for definition -->
+  <ellipse cx="32" cy="16" rx="4" ry="9" fill="none" stroke="#E8DFF5" stroke-width="0.5" opacity="0.6"/>
+  <ellipse cx="32" cy="16" rx="4" ry="9" fill="none" stroke="#E8DFF5" stroke-width="0.5" opacity="0.6" transform="rotate(45 32 28)"/>
+  <ellipse cx="32" cy="16" rx="4" ry="9" fill="none" stroke="#E8DFF5" stroke-width="0.5" opacity="0.6" transform="rotate(90 32 28)"/>
+  <ellipse cx="32" cy="16" rx="4" ry="9" fill="none" stroke="#E8DFF5" stroke-width="0.5" opacity="0.6" transform="rotate(135 32 28)"/>
+  <!-- Center -->
+  <circle cx="32" cy="28" r="6" fill="#FFD93D"/>
+  <circle cx="32" cy="28" r="3.5" fill="#FFF8F0" opacity="0.4"/>
+  <circle cx="30" cy="26" r="1.5" fill="white" opacity="0.3"/>
+</svg>

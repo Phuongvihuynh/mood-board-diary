@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 180" width="200" height="180">
+  <defs>
+    <filter id="note-shadow" x="-3%" y="-3%" width="110%" height="110%">
+      <feDropShadow dx="1.5" dy="2" stdDeviation="2" flood-color="#00000018"/>
+    </filter>
+  </defs>
+  <g filter="url(#note-shadow)">
+    <!-- Paper background -->
+    <rect x="5" y="5" width="190" height="170" rx="1" ry="1" fill="#FFFFFF"/>
+    <!-- Slight off-white tint -->
+    <rect x="5" y="5" width="190" height="170" rx="1" ry="1" fill="#FAFCFF" opacity="0.5"/>
+    <!-- Red margin line -->
+    <line x1="35" y1="5" x2="35" y2="175" stroke="#F4A0A0" stroke-width="0.8" opacity="0.5"/>
+    <!-- Horizontal ruled lines -->
+    <line x1="5" y1="30" x2="195" y2="30" stroke="#BDD4F0" stroke-width="0.5" opacity="0.45"/>
+    <line x1="5" y1="48" x2="195" y2="48" stroke="#BDD4F0" stroke-width="0.5" opacity="0.45"/>
+    <line x1="5" y1="66" x2="195" y2="66" stroke="#BDD4F0" stroke-width="0.5" opacity="0.45"/>
+    <line x1="5" y1="84" x2="195" y2="84" stroke="#BDD4F0" stroke-width="0.5" opacity="0.45"/>
+    <line x1="5" y1="102" x2="195" y2="102" stroke="#BDD4F0" stroke-width="0.5" opacity="0.45"/>
+    <line x1="5" y1="120" x2="195" y2="120" stroke="#BDD4F0" stroke-width="0.5" opacity="0.45"/>
+    <line x1="5" y1="138" x2="195" y2="138" stroke="#BDD4F0" stroke-width="0.5" opacity="0.45"/>
+    <line x1="5" y1="156" x2="195" y2="156" stroke="#BDD4F0" stroke-width="0.5" opacity="0.45"/>
+    <!-- Punch holes -->
+    <circle cx="12" cy="40" r="3.5" fill="none" stroke="#D8D8D8" stroke-width="0.6" opacity="0.4"/>
+    <circle cx="12" cy="90" r="3.5" fill="none" stroke="#D8D8D8" stroke-width="0.6" opacity="0.4"/>
+    <circle cx="12" cy="140" r="3.5" fill="none" stroke="#D8D8D8" stroke-width="0.6" opacity="0.4"/>
+    <!-- Paper border -->
+    <rect x="5" y="5" width="190" height="170" rx="1" ry="1" fill="none" stroke="#E8E8E8" stroke-width="0.5"/>
+  </g>
+</svg>

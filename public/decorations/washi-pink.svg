@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 40" width="200" height="40">
+  <defs>
+    <pattern id="pink-dots" x="0" y="0" width="8" height="8" patternUnits="userSpaceOnUse">
+      <circle cx="4" cy="4" r="1.2" fill="#D4749A" opacity="0.4"/>
+    </pattern>
+    <clipPath id="pink-torn-edges">
+      <path d="
+        M2,3 Q5,0 8,2 Q12,5 16,1 Q20,3 24,2 Q28,0 32,3 Q36,1 40,2
+        Q44,0 48,3 Q52,1 56,2 Q60,0 64,3 Q68,1 72,2 Q76,0 80,2
+        Q84,4 88,1 Q92,3 96,2 Q100,0 104,3 Q108,1 112,2 Q116,0 120,3
+        Q124,1 128,2 Q132,0 136,2 Q140,4 144,1 Q148,3 152,2 Q156,0 160,3
+        Q164,1 168,2 Q172,0 176,3 Q180,1 184,2 Q188,0 192,2 Q196,4 200,3
+        L200,37 Q196,40 192,38 Q188,36 184,39 Q180,37 176,38 Q172,40 168,37
+        Q164,39 160,38 Q156,40 152,37 Q148,39 144,38 Q140,36 136,39
+        Q132,37 128,38 Q124,40 120,37 Q116,39 112,38 Q108,40 104,37
+        Q100,39 96,38 Q92,36 88,39 Q84,37 80,38 Q76,40 72,37
+        Q68,39 64,38 Q60,40 56,37 Q52,39 48,38 Q44,36 40,39
+        Q36,37 32,38 Q28,40 24,37 Q20,39 16,38 Q12,36 8,39 Q4,37 2,38 Z
+      "/>
+    </clipPath>
+  </defs>
+  <!-- Main tape body -->
+  <g clip-path="url(#pink-torn-edges)">
+    <rect x="0" y="0" width="200" height="40" fill="#E8A0BF" opacity="0.75"/>
+    <!-- Subtle transparency strip down the center -->
+    <rect x="0" y="12" width="200" height="16" fill="#E8A0BF" opacity="0.15"/>
+    <!-- Dot pattern overlay -->
+    <rect x="0" y="0" width="200" height="40" fill="url(#pink-dots)"/>
+    <!-- Light sheen highlight -->
+    <rect x="0" y="6" width="200" height="3" fill="white" opacity="0.15"/>
+  </g>
+</svg>

@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 140 35" width="140" height="35">
+  <defs>
+    <pattern id="masking-texture" x="0" y="0" width="4" height="4" patternUnits="userSpaceOnUse">
+      <rect x="0" y="0" width="4" height="4" fill="#F5E6D3"/>
+      <rect x="0" y="0" width="1" height="1" fill="#E8D5BF" opacity="0.4"/>
+      <rect x="2" y="2" width="1.5" height="1" fill="#EDE0CE" opacity="0.3"/>
+      <rect x="1" y="3" width="1" height="0.5" fill="#E0CDB5" opacity="0.25"/>
+    </pattern>
+    <clipPath id="masking-torn">
+      <path d="
+        M0,4 Q3,1 6,3 Q9,0 12,4 Q15,2 18,3 Q22,0 25,4 Q28,1 31,3
+        Q34,0 37,2 Q40,4 43,1 Q46,3 49,2 Q52,0 55,4 Q58,1 61,3
+        Q64,0 67,2 Q70,4 73,1 Q76,3 79,2 Q82,0 85,3 Q88,1 91,4
+        Q94,2 97,3 Q100,0 103,2 Q106,4 109,1 Q112,3 115,2
+        Q118,0 121,3 Q124,1 127,4 Q130,2 133,3 Q136,0 139,2 L140,3
+        L140,32 Q137,35 134,33 Q131,31 128,34 Q125,32 122,33 Q119,35 116,32
+        Q113,34 110,33 Q107,35 104,32 Q101,34 98,33 Q95,31 92,34
+        Q89,32 86,33 Q83,35 80,32 Q77,34 74,33 Q71,35 68,32
+        Q65,34 62,33 Q59,31 56,34 Q53,32 50,33 Q47,35 44,32
+        Q41,34 38,33 Q35,35 32,32 Q29,34 26,33 Q23,31 20,34
+        Q17,32 14,33 Q11,35 8,32 Q5,34 2,33 Q0,31 0,32 Z
+      "/>
+    </clipPath>
+  </defs>
+  <g clip-path="url(#masking-torn)">
+    <!-- Base tape color -->
+    <rect x="0" y="0" width="140" height="35" fill="#F5E6D3" opacity="0.9"/>
+    <!-- Paper texture -->
+    <rect x="0" y="0" width="140" height="35" fill="url(#masking-texture)"/>
+    <!-- Subtle crinkle lines -->
+    <line x1="20" y1="5" x2="22" y2="30" stroke="#E0CDB5" stroke-width="0.5" opacity="0.3"/>
+    <line x1="55" y1="3" x2="54" y2="32" stroke="#E0CDB5" stroke-width="0.4" opacity="0.25"/>
+    <line x1="90" y1="4" x2="91" y2="31" stroke="#E0CDB5" stroke-width="0.5" opacity="0.3"/>
+    <line x1="118" y1="5" x2="119" y2="30" stroke="#E0CDB5" stroke-width="0.4" opacity="0.2"/>
+    <!-- Slight highlight -->
+    <rect x="0" y="10" width="140" height="4" fill="white" opacity="0.1"/>
+  </g>
+</svg>

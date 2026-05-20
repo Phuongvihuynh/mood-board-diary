@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 250 150" width="250" height="150">
+  <defs>
+    <filter id="torn-shadow" x="-5%" y="-5%" width="115%" height="115%">
+      <feDropShadow dx="1" dy="2" stdDeviation="2.5" flood-color="#00000020"/>
+    </filter>
+    <clipPath id="torn-edges">
+      <path d="
+        M8,5 Q12,2 16,6 Q20,3 25,5 Q30,2 35,7 Q38,3 42,5 Q46,2 50,6
+        Q54,3 58,5 Q63,2 68,7 Q72,4 76,5 Q80,2 85,6 Q90,3 95,5
+        Q100,2 105,7 Q108,4 112,5 Q116,2 120,6 Q125,3 130,5
+        Q135,2 140,6 Q145,3 150,5 Q155,2 160,7 Q163,4 168,5
+        Q172,2 176,6 Q180,3 184,5 Q188,2 192,7 Q196,4 200,5
+        Q204,2 208,6 Q212,3 216,5 Q220,2 224,6 Q228,3 232,5
+        Q236,2 240,5 Q244,3 248,6
+        L248,140 Q244,143 240,141 Q236,145 232,142 Q228,144 224,141
+        Q220,146 216,143 Q212,145 208,141 Q204,144 200,142 Q196,146 192,143
+        Q188,145 184,141 Q180,144 176,142 Q172,146 168,143 Q163,145 160,142
+        Q155,144 150,141 Q145,146 140,143 Q135,145 130,142 Q125,144 120,141
+        Q116,146 112,143 Q108,145 105,142 Q100,144 95,141 Q90,145 85,143
+        Q80,146 76,142 Q72,144 68,141 Q63,145 58,143 Q54,146 50,142
+        Q46,144 42,141 Q38,145 35,143 Q30,146 25,142 Q20,144 16,141
+        Q12,145 8,143
+        L5,143 Q2,140 4,136 Q1,132 5,128 Q2,124 4,120 Q1,116 5,112
+        Q2,108 4,104 Q1,100 5,96 Q2,92 4,88 Q1,84 5,80
+        Q2,76 4,72 Q1,68 5,64 Q2,60 4,56 Q1,52 5,48
+        Q2,44 4,40 Q1,36 5,32 Q2,28 4,24 Q1,20 5,16
+        Q2,12 4,8 Z
+      "/>
+    </clipPath>
+  </defs>
+  <g filter="url(#torn-shadow)">
+    <g clip-path="url(#torn-edges)">
+      <!-- Paper base -->
+      <rect x="0" y="0" width="250" height="150" fill="#FFF8F0"/>
+      <!-- Subtle paper texture / fiber lines -->
+      <line x1="15" y1="20" x2="18" y2="22" stroke="#F0E8DD" stroke-width="0.5" opacity="0.5"/>
+      <line x1="60" y1="45" x2="64" y2="44" stroke="#F0E8DD" stroke-width="0.4" opacity="0.4"/>
+      <line x1="120" y1="30" x2="123" y2="32" stroke="#F0E8DD" stroke-width="0.5" opacity="0.5"/>
+      <line x1="180" y1="70" x2="184" y2="69" stroke="#F0E8DD" stroke-width="0.4" opacity="0.4"/>
+      <line x1="90" y1="100" x2="94" y2="101" stroke="#F0E8DD" stroke-width="0.5" opacity="0.5"/>
+      <line x1="200" y1="110" x2="203" y2="112" stroke="#F0E8DD" stroke-width="0.4" opacity="0.4"/>
+      <line x1="40" y1="80" x2="43" y2="78" stroke="#F0E8DD" stroke-width="0.5" opacity="0.5"/>
+      <line x1="150" y1="120" x2="154" y2="121" stroke="#F0E8DD" stroke-width="0.4" opacity="0.3"/>
+      <!-- Slight gradient for depth -->
+      <rect x="0" y="0" width="250" height="150" fill="url(#none)" opacity="0"/>
+    </g>
+    <!-- Torn edge shading - inner shadow on left and top edges -->
+    <path d="M8,5 Q12,2 16,6 Q20,3 25,5 Q30,2 35,7 Q38,3 42,5 Q46,2 50,6 Q54,3 58,5 Q63,2 68,7 Q72,4 76,5 Q80,2 85,6 Q90,3 95,5 Q100,2 105,7"
+          fill="none" stroke="#E8DDD0" stroke-width="0.8" opacity="0.4"/>
+  </g>
+</svg>
