@@ -1,10 +1,11 @@
 "use client";
 
 import { useState, useEffect, useRef, forwardRef, useImperativeHandle } from "react";
-import { Stage, Layer, Rect, Text, Image as KonvaImage } from "react-konva";
+import { Stage, Layer, Rect, Text, Image as KonvaImage, Group } from "react-konva";
 import { useBoardStore } from "@/stores/useBoardStore";
 import { FONT_FAMILY_MAP } from "@/lib/fonts";
 import type Konva from "konva";
+import type { CollageElement } from "@/types/board";
 
 export interface ExportLayerHandle {
   exportPNG: () => Promise<string | null>;
@@ -110,6 +111,15 @@ export const BoardExportLayer = forwardRef<ExportLayerHandle>(
                   );
                 }
 
+                if (el.type === "collage") {
+                  return (
+                    <KonvaCollage
+                      key={el.id}
+                      element={el}
+                    />
+                  );
+                }
+
                 return null;
               })}
           </Layer>
@@ -157,6 +167,117 @@ function KonvaImageFromSrc({
       rotation={rotation}
       opacity={opacity}
     />
+  );
+}
+
+function KonvaCollage({ element }: { element: CollageElement }) {
+  const halfGap = element.gap / 2;
+
+  return (
+    <Group
+      x={element.x}
+      y={element.y}
+      width={element.width}
+      height={element.height}
+      rotation={element.rotation}
+      opacity={element.opacity}
+    >
+      {/* Background */}
+      <Rect
+        x={0}
+        y={0}
+        width={element.width}
+        height={element.height}
+        fill={element.backgroundColor}
+        cornerRadius={element.borderRadius}
+      />
+      {/* Slots */}
+      {element.slots.map((slot) => {
+        const sx = (slot.x / 100) * element.width + halfGap;
+        const sy = (slot.y / 100) * element.height + halfGap;
+        const sw = (slot.width / 100) * element.width - element.gap;
+        const sh = (slot.height / 100) * element.height - element.gap;
+
+        if (!slot.src) {
+          return (
+            <Rect
+              key={slot.id}
+              x={sx}
+              y={sy}
+              width={sw}
+              height={sh}
+              fill="#f0f0f0"
+              cornerRadius={Math.max(0, element.borderRadius - 2)}
+            />
+          );
+        }
+
+        return (
+          <KonvaCollageSlotImage
+            key={slot.id}
+            src={slot.src}
+            x={sx}
+            y={sy}
+            width={sw}
+            height={sh}
+            cornerRadius={Math.max(0, element.borderRadius - 2)}
+          />
+        );
+      })}
+    </Group>
+  );
+}
+
+function KonvaCollageSlotImage({
+  src,
+  x,
+  y,
+  width,
+  height,
+  cornerRadius,
+}: {
+  src: string;
+  x: number;
+  y: number;
+  width: number;
+  height: number;
+  cornerRadius: number;
+}) {
+  const [image, setImage] = useState<HTMLImageElement | null>(null);
+
+  useEffect(() => {
+    const img = new window.Image();
+    img.crossOrigin = "anonymous";
+    img.onload = () => setImage(img);
+    img.src = src;
+  }, [src]);
+
+  if (!image) return null;
+
+  // Compute crop for object-cover behavior
+  const imgRatio = image.naturalWidth / image.naturalHeight;
+  const slotRatio = width / height;
+  let cropX = 0, cropY = 0, cropW = image.naturalWidth, cropH = image.naturalHeight;
+
+  if (imgRatio > slotRatio) {
+    cropW = image.naturalHeight * slotRatio;
+    cropX = (image.naturalWidth - cropW) / 2;
+  } else {
+    cropH = image.naturalWidth / slotRatio;
+    cropY = (image.naturalHeight - cropH) / 2;
+  }
+
+  return (
+    <Group x={x} y={y} clipX={0} clipY={0} clipWidth={width} clipHeight={height}>
+      <KonvaImage
+        image={image}
+        x={0}
+        y={0}
+        width={width}
+        height={height}
+        crop={{ x: cropX, y: cropY, width: cropW, height: cropH }}
+      />
+    </Group>
   );
 }
 

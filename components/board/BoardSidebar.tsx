@@ -7,11 +7,13 @@ import { TextPanel } from "./panels/TextPanel";
 import { StickerPanel } from "./panels/StickerPanel";
 import { DecorationPanel } from "./panels/DecorationPanel";
 import { BackgroundPanel } from "./panels/BackgroundPanel";
+import { CollagePanel } from "./panels/CollagePanel";
 
 const tabs = [
   { id: "photo", label: "Photo", icon: "📷" },
   { id: "text", label: "Text", icon: "Aa" },
   { id: "sticker", label: "Sticker", icon: "⭐" },
+  { id: "collage", label: "Frame", icon: "🖼" },
   { id: "deco", label: "Deco", icon: "🎀" },
   { id: "bg", label: "BG", icon: "🎨" },
 ] as const;
@@ -59,6 +61,7 @@ export function BoardSidebar() {
             {activeTab === "photo" && <PhotoPanel />}
             {activeTab === "text" && <TextPanel />}
             {activeTab === "sticker" && <StickerPanel />}
+            {activeTab === "collage" && <CollagePanel />}
             {activeTab === "deco" && <DecorationPanel />}
             {activeTab === "bg" && <BackgroundPanel />}
           </motion.div>
