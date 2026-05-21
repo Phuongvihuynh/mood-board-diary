@@ -22,9 +22,14 @@ interface BoardGridProps {
 export function BoardGrid({ onCreateClick }: BoardGridProps) {
   const boards = useBoardListStore((s) => s.boards);
   const [sortBy, setSortBy] = useState<SortBy>("newest");
+  const [search, setSearch] = useState("");
 
   const sorted = useMemo(() => {
-    const copy = [...boards];
+    let copy = [...boards];
+    if (search.trim()) {
+      const q = search.trim().toLowerCase();
+      copy = copy.filter((b) => b.name.toLowerCase().includes(q));
+    }
     switch (sortBy) {
       case "newest":
         return copy.sort((a, b) => b.createdAt - a.createdAt);
@@ -35,14 +40,28 @@ export function BoardGrid({ onCreateClick }: BoardGridProps) {
       case "name-desc":
         return copy.sort((a, b) => b.name.localeCompare(a.name));
     }
-  }, [boards, sortBy]);
+  }, [boards, sortBy, search]);
 
   return (
     <div>
-      {/* Sort bar */}
+      {/* Search & Sort bar */}
       {boards.length > 0 && (
-        <div className="flex items-center justify-end gap-2 mb-4">
-          <span className="text-sm text-soft-brown">Sort by:</span>
+        <div className="flex items-center justify-between gap-4 mb-4">
+          {/* Search */}
+          <div className="relative">
+            <span className="absolute left-3 top-1/2 -translate-y-1/2 text-soft-brown text-sm">🔍</span>
+            <input
+              type="text"
+              placeholder="Search boards..."
+              value={search}
+              onChange={(e) => setSearch(e.target.value)}
+              className="pl-9 pr-3 py-1.5 rounded-xl bg-white/60 border border-soft-brown/20 text-sm outline-none focus:border-warm-pink/50 transition-colors w-48 font-kalam placeholder:text-soft-brown/50"
+            />
+          </div>
+
+          {/* Sort */}
+          <div className="flex items-center gap-2">
+            <span className="text-sm text-soft-brown">Sort by:</span>
           <div className="flex gap-1">
             {sortOptions.map((opt) => (
               <motion.button
@@ -58,8 +77,16 @@ export function BoardGrid({ onCreateClick }: BoardGridProps) {
                 {opt.label}
               </motion.button>
             ))}
+            </div>
           </div>
         </div>
+      )}
+
+      {/* Empty search state */}
+      {search.trim() && sorted.length === 0 && (
+        <p className="text-center text-soft-brown py-8 font-kalam">
+          No boards matching &ldquo;{search}&rdquo;
+        </p>
       )}
 
       {/* Grid */}
