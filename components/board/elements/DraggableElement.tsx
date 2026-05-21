@@ -21,6 +21,7 @@ export function DraggableElement({ element, children }: DraggableElementProps) {
   const selectElement = useBoardStore((s) => s.selectElement);
   const deleteElement = useBoardStore((s) => s.deleteElement);
   const duplicateElement = useBoardStore((s) => s.duplicateElement);
+  const updateElement = useBoardStore((s) => s.updateElement);
 
   const isSelected = selectedId === element.id;
   const { onPointerDown } = useElementDrag(element.id);
@@ -108,6 +109,28 @@ export function DraggableElement({ element, children }: DraggableElementProps) {
           >
             ⧉
           </button>
+
+          {/* Opacity slider */}
+          <div
+            className="absolute -bottom-10 left-1/2 -translate-x-1/2 flex items-center gap-1.5 bg-white/90 backdrop-blur-sm rounded-lg px-2 py-1 shadow-sm border border-soft-brown/15"
+            onPointerDown={(e) => e.stopPropagation()}
+          >
+            <span className="text-[10px] text-soft-brown">◐</span>
+            <input
+              type="range"
+              min={0.1}
+              max={1}
+              step={0.05}
+              value={element.opacity}
+              onChange={(e) =>
+                updateElement(element.id, { opacity: Number(e.target.value) })
+              }
+              className="w-20 h-1 accent-warm-pink cursor-pointer"
+            />
+            <span className="text-[10px] text-soft-brown w-7 text-right">
+              {Math.round(element.opacity * 100)}%
+            </span>
+          </div>
         </>
       )}
     </motion.div>
