@@ -6,7 +6,7 @@ export type DecorationVariant =
   | "torn-paper"
   | "paper-clip";
 
-export type PhotoFrame = "none" | "polaroid" | "tape-corners";
+export type PhotoFrame = "none" | "polaroid" | "tape-corners" | "rounded" | "shadow" | "vintage";
 
 export interface BaseElement {
   id: string;
