@@ -5,7 +5,7 @@ import { motion } from "framer-motion";
 import Link from "next/link";
 import { BoardMeta } from "@/types/board";
 import { useBoardListStore } from "@/stores/useBoardListStore";
-import { deleteBoardData } from "@/lib/storage";
+import { deleteBoardData, loadBoardData, saveBoardData } from "@/lib/storage";
 import { ConfirmModal } from "@/components/ui/ConfirmModal";
 
 interface BoardCardProps {
@@ -16,6 +16,7 @@ interface BoardCardProps {
 export function BoardCard({ board, index }: BoardCardProps) {
   const deleteBoard = useBoardListStore((s) => s.deleteBoard);
   const updateBoard = useBoardListStore((s) => s.updateBoard);
+  const addBoard = useBoardListStore((s) => s.addBoard);
   const [showConfirm, setShowConfirm] = useState(false);
   const [editing, setEditing] = useState(false);
   const [name, setName] = useState(board.name);
@@ -48,6 +49,17 @@ export function BoardCard({ board, index }: BoardCardProps) {
     } else {
       setName(board.name);
     }
+  };
+
+  const handleDuplicateClick = (e: React.MouseEvent) => {
+    e.preventDefault();
+    e.stopPropagation();
+    const data = loadBoardData(board.id);
+    if (!data) return;
+    const newId = addBoard(`${board.name} (copy)`);
+    const newData = JSON.parse(JSON.stringify(data));
+    newData.id = newId;
+    saveBoardData(newData);
   };
 
   const handleConfirm = () => {
@@ -122,6 +134,13 @@ export function BoardCard({ board, index }: BoardCardProps) {
                 title="Rename"
               >
                 ✎
+              </button>
+              <button
+                onClick={handleDuplicateClick}
+                className="w-7 h-7 rounded-full bg-white/80 text-soft-brown hover:bg-sage hover:text-foreground flex items-center justify-center cursor-pointer text-xs"
+                title="Duplicate"
+              >
+                ⧉
               </button>
               <button
                 onClick={handleDeleteClick}
