@@ -24,16 +24,18 @@ export function BoardCard({ board, index }: BoardCardProps) {
   };
 
   const handleConfirm = () => {
+    setShowConfirm(false);
     deleteBoard(board.id);
     deleteBoardData(board.id);
-    setShowConfirm(false);
   };
 
   return (
     <>
       <motion.div
-        initial={{ opacity: 0, y: 20 }}
-        animate={{ opacity: 1, y: 0 }}
+        layout
+        initial={{ opacity: 0, y: 20, scale: 0.9 }}
+        animate={{ opacity: 1, y: 0, scale: 1 }}
+        exit={{ opacity: 0, scale: 0.8, y: -10, transition: { duration: 0.3, ease: "easeIn" } }}
         transition={{ delay: index * 0.06, type: "spring", damping: 20 }}
       >
         <Link href={`/board/${board.id}`}>
