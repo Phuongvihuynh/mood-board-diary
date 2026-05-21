@@ -1,11 +1,12 @@
 "use client";
 
-import { useEffect, useRef, useState, use } from "react";
+import { useCallback, useEffect, useRef, useState, use } from "react";
 import dynamic from "next/dynamic";
 import { useRouter } from "next/navigation";
 import { useBoardStore } from "@/stores/useBoardStore";
 import { useBoardListStore } from "@/stores/useBoardListStore";
 import { useAutoSave } from "@/hooks/useAutoSave";
+import { useKeyboardShortcuts } from "@/hooks/useKeyboardShortcuts";
 import { loadBoardData } from "@/lib/storage";
 import { downloadDataUrl } from "@/lib/export-helpers";
 import { BoardCanvas } from "@/components/board/BoardCanvas";
@@ -36,7 +37,18 @@ export default function BoardEditorPage({
   const exportRef = useRef<ExportLayerHandle>(null);
   const [loaded, setLoaded] = useState(false);
 
+  const handleExport = useCallback(async () => {
+    if (!exportRef.current) return;
+    const dataUrl = await exportRef.current.exportPNG();
+    if (dataUrl) {
+      const boardMeta = useBoardListStore.getState().boards.find((b) => b.id === id);
+      const name = boardMeta?.name || "mood-board";
+      downloadDataUrl(dataUrl, `${name}.png`);
+    }
+  }, [id]);
+
   useAutoSave();
+  useKeyboardShortcuts(handleExport);
 
   useEffect(() => {
     const data = loadBoardData(id);
@@ -49,16 +61,6 @@ export default function BoardEditorPage({
 
     return () => resetBoard();
   }, [id, loadBoard, resetBoard, router]);
-
-  const handleExport = async () => {
-    if (!exportRef.current) return;
-    const dataUrl = await exportRef.current.exportPNG();
-    if (dataUrl) {
-      const boardMeta = useBoardListStore.getState().boards.find((b) => b.id === id);
-      const name = boardMeta?.name || "mood-board";
-      downloadDataUrl(dataUrl, `${name}.png`);
-    }
-  };
 
   if (!loaded || !board) {
     return (
