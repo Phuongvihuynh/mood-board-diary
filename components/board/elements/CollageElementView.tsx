@@ -37,6 +37,14 @@ export function CollageElementView({ element }: CollageElementViewProps) {
     updateElement(element.id, { slots: newSlots } as Partial<CollageElement>);
   };
 
+  const handleSlotRemove = (e: React.MouseEvent, slotId: string) => {
+    e.stopPropagation();
+    const newSlots = element.slots.map((s) =>
+      s.id === slotId ? { ...s, src: undefined } : s
+    );
+    updateElement(element.id, { slots: newSlots } as Partial<CollageElement>);
+  };
+
   const handleSlotClick = (e: React.MouseEvent, slotId: string) => {
     e.stopPropagation();
     const input = inputRefs.current.get(slotId);
@@ -91,7 +99,7 @@ export function CollageElementView({ element }: CollageElementViewProps) {
             }}
           />
           <div
-            className={`w-full h-full cursor-pointer overflow-hidden relative ${
+            className={`group w-full h-full cursor-pointer overflow-hidden relative ${
               dropTargetId === slot.id ? "ring-2 ring-soft-brown ring-offset-1" : ""
             }`}
             style={{ borderRadius: Math.max(0, element.borderRadius - 2) }}
@@ -107,12 +115,20 @@ export function CollageElementView({ element }: CollageElementViewProps) {
             }}
           >
             {slot.src ? (
-              <img
-                src={slot.src}
-                alt=""
-                className="w-full h-full object-cover"
-                draggable={false}
-              />
+              <>
+                <img
+                  src={slot.src}
+                  alt=""
+                  className="w-full h-full object-cover"
+                  draggable={false}
+                />
+                <button
+                  className="absolute top-1 right-1 w-5 h-5 rounded-full bg-black/50 hover:bg-black/70 text-white text-xs flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity"
+                  onClick={(e) => handleSlotRemove(e, slot.id)}
+                >
+                  ×
+                </button>
+              </>
             ) : (
               <div className="w-full h-full border-2 border-dashed border-soft-brown/30 flex items-center justify-center bg-white/30 hover:bg-white/50 transition-colors">
                 <span className="text-2xl text-soft-brown/40">+</span>
