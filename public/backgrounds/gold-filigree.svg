@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="800" viewBox="0 0 800 800">
+  <defs>
+    <pattern id="filigree" patternUnits="userSpaceOnUse" width="160" height="160">
+      <rect width="160" height="160" fill="#FDF8F0"/>
+      <g opacity="0.15" fill="none" stroke="#C4A050" stroke-width="1">
+        <path d="M80,10 Q100,40 80,80 Q60,40 80,10Z"/>
+        <path d="M80,80 Q100,120 80,150 Q60,120 80,80Z"/>
+        <path d="M10,80 Q40,60 80,80 Q40,100 10,80Z"/>
+        <path d="M80,80 Q120,60 150,80 Q120,100 80,80Z"/>
+        <circle cx="80" cy="80" r="8"/>
+        <circle cx="80" cy="80" r="3" fill="#C4A050"/>
+        <path d="M30,30 Q50,50 30,70" stroke-width="0.8"/>
+        <path d="M130,30 Q110,50 130,70" stroke-width="0.8"/>
+        <path d="M30,90 Q50,110 30,130" stroke-width="0.8"/>
+        <path d="M130,90 Q110,110 130,130" stroke-width="0.8"/>
+      </g>
+    </pattern>
+  </defs>
+  <rect width="800" height="800" fill="url(#filigree)"/>
+</svg>

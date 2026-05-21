@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="800" viewBox="0 0 800 800">
+  <defs>
+    <pattern id="lavender" patternUnits="userSpaceOnUse" width="180" height="200">
+      <rect width="180" height="200" fill="#F5F0FA"/>
+      <g opacity="0.3">
+        <line x1="40" y1="190" x2="40" y2="60" stroke="#6B8E6B" stroke-width="1.5"/>
+        <circle cx="40" cy="65" r="3" fill="#9B72CF"/>
+        <circle cx="40" cy="73" r="3.2" fill="#A882D4"/>
+        <circle cx="40" cy="81" r="3.5" fill="#B592DA"/>
+        <circle cx="40" cy="89" r="3.2" fill="#A882D4"/>
+        <circle cx="40" cy="97" r="3" fill="#9B72CF"/>
+        <ellipse cx="32" cy="140" rx="8" ry="3" fill="#6B8E6B" opacity="0.4" transform="rotate(-30 32 140)"/>
+        <ellipse cx="48" cy="155" rx="8" ry="3" fill="#6B8E6B" opacity="0.4" transform="rotate(25 48 155)"/>
+      </g>
+      <g opacity="0.25" transform="translate(100,20)">
+        <line x1="40" y1="170" x2="40" y2="50" stroke="#6B8E6B" stroke-width="1.5"/>
+        <circle cx="40" cy="55" r="2.5" fill="#9B72CF"/>
+        <circle cx="40" cy="62" r="2.8" fill="#A882D4"/>
+        <circle cx="40" cy="69" r="3" fill="#B592DA"/>
+        <circle cx="40" cy="76" r="2.8" fill="#A882D4"/>
+        <circle cx="40" cy="83" r="2.5" fill="#9B72CF"/>
+        <ellipse cx="33" cy="120" rx="7" ry="2.5" fill="#6B8E6B" opacity="0.4" transform="rotate(-25 33 120)"/>
+      </g>
+    </pattern>
+  </defs>
+  <rect width="800" height="800" fill="url(#lavender)"/>
+</svg>

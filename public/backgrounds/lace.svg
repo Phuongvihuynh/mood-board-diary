@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="800" viewBox="0 0 800 800">
+  <defs>
+    <pattern id="lace" patternUnits="userSpaceOnUse" width="80" height="80">
+      <rect width="80" height="80" fill="#FFFBF5"/>
+      <g opacity="0.15" fill="none" stroke="#C4A880" stroke-width="0.8">
+        <circle cx="40" cy="40" r="15"/>
+        <circle cx="40" cy="40" r="25"/>
+        <circle cx="0" cy="0" r="15"/>
+        <circle cx="80" cy="0" r="15"/>
+        <circle cx="0" cy="80" r="15"/>
+        <circle cx="80" cy="80" r="15"/>
+        <path d="M40,15 Q50,25 40,35 Q30,25 40,15Z"/>
+        <path d="M15,40 Q25,30 35,40 Q25,50 15,40Z"/>
+        <path d="M45,40 Q55,30 65,40 Q55,50 45,40Z"/>
+        <path d="M40,45 Q50,55 40,65 Q30,55 40,45Z"/>
+      </g>
+    </pattern>
+  </defs>
+  <rect width="800" height="800" fill="url(#lace)"/>
+</svg>

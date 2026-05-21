@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="800" viewBox="0 0 800 800">
+  <defs>
+    <pattern id="damask" patternUnits="userSpaceOnUse" width="120" height="120">
+      <rect width="120" height="120" fill="#F8F0E8"/>
+      <g opacity="0.12" fill="#8B7355">
+        <path d="M60,10 Q75,30 60,50 Q45,30 60,10Z"/>
+        <path d="M60,70 Q75,90 60,110 Q45,90 60,70Z"/>
+        <path d="M10,60 Q30,45 50,60 Q30,75 10,60Z"/>
+        <path d="M70,60 Q90,45 110,60 Q90,75 70,60Z"/>
+        <circle cx="60" cy="60" r="5"/>
+        <circle cx="60" cy="10" r="2"/>
+        <circle cx="60" cy="110" r="2"/>
+        <circle cx="10" cy="60" r="2"/>
+        <circle cx="110" cy="60" r="2"/>
+      </g>
+    </pattern>
+  </defs>
+  <rect width="800" height="800" fill="url(#damask)"/>
+</svg>

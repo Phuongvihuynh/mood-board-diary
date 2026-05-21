@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="800" viewBox="0 0 800 800">
+  <defs>
+    <filter id="marbleNoise">
+      <feTurbulence type="turbulence" baseFrequency="0.015" numOctaves="5" seed="2"/>
+      <feColorMatrix type="saturate" values="0"/>
+      <feComponentTransfer>
+        <feFuncR type="linear" slope="0.15" intercept="0.85"/>
+        <feFuncG type="linear" slope="0.13" intercept="0.83"/>
+        <feFuncB type="linear" slope="0.12" intercept="0.82"/>
+        <feFuncA type="linear" slope="0.3"/>
+      </feComponentTransfer>
+    </filter>
+  </defs>
+  <rect width="800" height="800" fill="#F5F2EE"/>
+  <rect width="800" height="800" filter="url(#marbleNoise)"/>
+  <line x1="100" y1="0" x2="300" y2="800" stroke="#D8D0C8" stroke-width="1" opacity="0.3"/>
+  <line x1="400" y1="0" x2="550" y2="800" stroke="#D8D0C8" stroke-width="0.8" opacity="0.25"/>
+  <line x1="600" y1="0" x2="200" y2="800" stroke="#D8D0C8" stroke-width="0.6" opacity="0.2"/>
+</svg>

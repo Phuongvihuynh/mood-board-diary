@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="800" viewBox="0 0 800 800">
+  <defs>
+    <pattern id="sunflower" patternUnits="userSpaceOnUse" width="250" height="250">
+      <rect width="250" height="250" fill="#FFFEF5"/>
+      <g opacity="0.25" transform="translate(60,60)">
+        <ellipse cx="0" cy="-18" rx="5" ry="14" fill="#F4C430" transform="rotate(0 0 0)"/>
+        <ellipse cx="0" cy="-18" rx="5" ry="14" fill="#F4C430" transform="rotate(30 0 0)"/>
+        <ellipse cx="0" cy="-18" rx="5" ry="14" fill="#F4C430" transform="rotate(60 0 0)"/>
+        <ellipse cx="0" cy="-18" rx="5" ry="14" fill="#F4C430" transform="rotate(90 0 0)"/>
+        <ellipse cx="0" cy="-18" rx="5" ry="14" fill="#F4C430" transform="rotate(120 0 0)"/>
+        <ellipse cx="0" cy="-18" rx="5" ry="14" fill="#F4C430" transform="rotate(150 0 0)"/>
+        <ellipse cx="0" cy="-18" rx="5" ry="14" fill="#F4C430" transform="rotate(180 0 0)"/>
+        <ellipse cx="0" cy="-18" rx="5" ry="14" fill="#F4C430" transform="rotate(210 0 0)"/>
+        <ellipse cx="0" cy="-18" rx="5" ry="14" fill="#F4C430" transform="rotate(240 0 0)"/>
+        <ellipse cx="0" cy="-18" rx="5" ry="14" fill="#F4C430" transform="rotate(270 0 0)"/>
+        <ellipse cx="0" cy="-18" rx="5" ry="14" fill="#F4C430" transform="rotate(300 0 0)"/>
+        <ellipse cx="0" cy="-18" rx="5" ry="14" fill="#F4C430" transform="rotate(330 0 0)"/>
+        <circle cx="0" cy="0" r="10" fill="#8B6914"/>
+      </g>
+      <g opacity="0.15" transform="translate(190,180)">
+        <ellipse cx="0" cy="-12" rx="3.5" ry="10" fill="#F4C430" transform="rotate(0 0 0)"/>
+        <ellipse cx="0" cy="-12" rx="3.5" ry="10" fill="#F4C430" transform="rotate(30 0 0)"/>
+        <ellipse cx="0" cy="-12" rx="3.5" ry="10" fill="#F4C430" transform="rotate(60 0 0)"/>
+        <ellipse cx="0" cy="-12" rx="3.5" ry="10" fill="#F4C430" transform="rotate(90 0 0)"/>
+        <ellipse cx="0" cy="-12" rx="3.5" ry="10" fill="#F4C430" transform="rotate(120 0 0)"/>
+        <ellipse cx="0" cy="-12" rx="3.5" ry="10" fill="#F4C430" transform="rotate(150 0 0)"/>
+        <ellipse cx="0" cy="-12" rx="3.5" ry="10" fill="#F4C430" transform="rotate(180 0 0)"/>
+        <ellipse cx="0" cy="-12" rx="3.5" ry="10" fill="#F4C430" transform="rotate(210 0 0)"/>
+        <ellipse cx="0" cy="-12" rx="3.5" ry="10" fill="#F4C430" transform="rotate(240 0 0)"/>
+        <ellipse cx="0" cy="-12" rx="3.5" ry="10" fill="#F4C430" transform="rotate(270 0 0)"/>
+        <ellipse cx="0" cy="-12" rx="3.5" ry="10" fill="#F4C430" transform="rotate(300 0 0)"/>
+        <ellipse cx="0" cy="-12" rx="3.5" ry="10" fill="#F4C430" transform="rotate(330 0 0)"/>
+        <circle cx="0" cy="0" r="7" fill="#8B6914"/>
+      </g>
+    </pattern>
+  </defs>
+  <rect width="800" height="800" fill="url(#sunflower)"/>
+</svg>

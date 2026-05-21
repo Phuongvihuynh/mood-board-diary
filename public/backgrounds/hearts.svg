@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="800" viewBox="0 0 800 800">
+  <defs>
+    <pattern id="hearts" patternUnits="userSpaceOnUse" width="120" height="120">
+      <rect width="120" height="120" fill="#FFF5F5"/>
+      <g opacity="0.2" transform="translate(30,30) scale(0.8)">
+        <path d="M20,35 Q20,20 10,20 Q0,20 0,30 Q0,40 20,55 Q40,40 40,30 Q40,20 30,20 Q20,20 20,35Z" fill="#E88090"/>
+      </g>
+      <g opacity="0.12" transform="translate(80,80) scale(0.5)">
+        <path d="M20,35 Q20,20 10,20 Q0,20 0,30 Q0,40 20,55 Q40,40 40,30 Q40,20 30,20 Q20,20 20,35Z" fill="#E88090"/>
+      </g>
+    </pattern>
+  </defs>
+  <rect width="800" height="800" fill="url(#hearts)"/>
+</svg>
