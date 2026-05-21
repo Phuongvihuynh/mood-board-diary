@@ -45,6 +45,20 @@ export function CollageElementView({ element }: CollageElementViewProps) {
     updateElement(element.id, { slots: newSlots } as Partial<CollageElement>);
   };
 
+  const handleSlotZoom = (e: React.WheelEvent, slotId: string) => {
+    e.stopPropagation();
+    e.preventDefault();
+    const slot = element.slots.find((s) => s.id === slotId);
+    if (!slot?.src) return;
+    const current = slot.zoom ?? 1;
+    const delta = e.deltaY > 0 ? -0.1 : 0.1;
+    const newZoom = Math.min(3, Math.max(1, current + delta));
+    const newSlots = element.slots.map((s) =>
+      s.id === slotId ? { ...s, zoom: newZoom } : s
+    );
+    updateElement(element.id, { slots: newSlots } as Partial<CollageElement>);
+  };
+
   const handleSlotClick = (e: React.MouseEvent, slotId: string) => {
     e.stopPropagation();
     const input = inputRefs.current.get(slotId);
@@ -104,6 +118,7 @@ export function CollageElementView({ element }: CollageElementViewProps) {
             }`}
             style={{ borderRadius: Math.max(0, element.borderRadius - 2) }}
             onClick={(e) => handleSlotClick(e, slot.id)}
+            onWheel={(e) => handleSlotZoom(e, slot.id)}
             draggable={!!slot.src}
             onDragStart={(e) => {
               dragSlotId.current = slot.id;
@@ -121,6 +136,7 @@ export function CollageElementView({ element }: CollageElementViewProps) {
                   alt=""
                   className="w-full h-full object-cover"
                   draggable={false}
+                  style={{ transform: `scale(${slot.zoom ?? 1})` }}
                 />
                 <button
                   className="absolute top-1 right-1 w-5 h-5 rounded-full bg-black/50 hover:bg-black/70 text-white text-xs flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity"

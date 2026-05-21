@@ -54,6 +54,7 @@ export interface CollageSlot {
   width: number;
   height: number;
   src?: string;
+  zoom?: number; // 1 = default, >1 = zoomed in
 }
 
 export interface CollageElement extends BaseElement {
