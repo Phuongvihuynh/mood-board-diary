@@ -220,6 +220,7 @@ function KonvaCollage({ element }: { element: CollageElement }) {
             y={sy}
             width={sw}
             height={sh}
+            zoom={slot.zoom ?? 1}
             cornerRadius={Math.max(0, element.borderRadius - 2)}
           />
         );
@@ -234,6 +235,7 @@ function KonvaCollageSlotImage({
   y,
   width,
   height,
+  zoom,
   cornerRadius,
 }: {
   src: string;
@@ -241,6 +243,7 @@ function KonvaCollageSlotImage({
   y: number;
   width: number;
   height: number;
+  zoom: number;
   cornerRadius: number;
 }) {
   const [image, setImage] = useState<HTMLImageElement | null>(null);
@@ -266,6 +269,14 @@ function KonvaCollageSlotImage({
     cropH = image.naturalWidth / slotRatio;
     cropY = (image.naturalHeight - cropH) / 2;
   }
+
+  // Apply zoom: narrow the crop region
+  const zoomedW = cropW / zoom;
+  const zoomedH = cropH / zoom;
+  cropX += (cropW - zoomedW) / 2;
+  cropY += (cropH - zoomedH) / 2;
+  cropW = zoomedW;
+  cropH = zoomedH;
 
   return (
     <Group x={x} y={y} clipX={0} clipY={0} clipWidth={width} clipHeight={height}>
