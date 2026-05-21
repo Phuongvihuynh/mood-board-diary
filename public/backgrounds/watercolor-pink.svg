@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="800" viewBox="0 0 800 800">
+  <defs>
+    <radialGradient id="p1" cx="25%" cy="25%" r="50%">
+      <stop offset="0%" stop-color="#F8B4C8" stop-opacity="0.35"/>
+      <stop offset="100%" stop-color="#F8B4C8" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="p2" cx="75%" cy="50%" r="45%">
+      <stop offset="0%" stop-color="#F0A0B8" stop-opacity="0.3"/>
+      <stop offset="100%" stop-color="#F0A0B8" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="p3" cx="40%" cy="75%" r="40%">
+      <stop offset="0%" stop-color="#F8C0D0" stop-opacity="0.3"/>
+      <stop offset="100%" stop-color="#F8C0D0" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="p4" cx="80%" cy="20%" r="30%">
+      <stop offset="0%" stop-color="#E890A8" stop-opacity="0.2"/>
+      <stop offset="100%" stop-color="#E890A8" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <rect width="800" height="800" fill="#FFF5F8"/>
+  <rect width="800" height="800" fill="url(#p1)"/>
+  <rect width="800" height="800" fill="url(#p2)"/>
+  <rect width="800" height="800" fill="url(#p3)"/>
+  <rect width="800" height="800" fill="url(#p4)"/>
+</svg>

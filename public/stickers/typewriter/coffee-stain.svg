@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+  <!-- Outer ring -->
+  <circle cx="50" cy="50" r="35" fill="none" stroke="#704214" stroke-width="8" opacity="0.12"/>
+  <!-- Inner ring (slightly offset for realism) -->
+  <circle cx="51" cy="49" r="30" fill="none" stroke="#704214" stroke-width="3" opacity="0.08"/>
+  <!-- Slight fill in center -->
+  <circle cx="50" cy="50" r="28" fill="#704214" opacity="0.04"/>
+  <!-- Drip -->
+  <ellipse cx="72" cy="75" rx="8" ry="10" fill="#704214" opacity="0.08" transform="rotate(15 72 75)"/>
+  <!-- Small splatter dots -->
+  <circle cx="25" cy="30" r="2" fill="#704214" opacity="0.1"/>
+  <circle cx="78" cy="35" r="1.5" fill="#704214" opacity="0.08"/>
+  <circle cx="30" cy="72" r="1" fill="#704214" opacity="0.1"/>
+</svg>

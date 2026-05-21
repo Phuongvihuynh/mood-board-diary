@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+  <!-- Tape body (semi-transparent) -->
+  <rect x="5" y="30" width="90" height="40" rx="1" fill="#F5E6CA" opacity="0.65" stroke="#8B6914" stroke-width="0.5" stroke-opacity="0.3"/>
+  <!-- Torn left edge -->
+  <path d="M5 30 L7 33 L5 36 L7 39 L5 42 L7 45 L5 48 L7 51 L5 54 L7 57 L5 60 L7 63 L5 66 L7 69 L5 70" fill="none" stroke="#8B6914" stroke-width="0.5" opacity="0.3"/>
+  <!-- Torn right edge -->
+  <path d="M95 30 L93 33 L95 36 L93 39 L95 42 L93 45 L95 48 L93 51 L95 54 L93 57 L95 60 L93 63 L95 66 L93 69 L95 70" fill="none" stroke="#8B6914" stroke-width="0.5" opacity="0.3"/>
+  <!-- Texture lines -->
+  <line x1="15" y1="42" x2="85" y2="42" stroke="#8B6914" stroke-width="0.3" opacity="0.15"/>
+  <line x1="15" y1="50" x2="85" y2="50" stroke="#8B6914" stroke-width="0.3" opacity="0.15"/>
+  <line x1="15" y1="58" x2="85" y2="58" stroke="#8B6914" stroke-width="0.3" opacity="0.15"/>
+</svg>

@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="800" viewBox="0 0 800 800">
+  <defs>
+    <pattern id="autumn" patternUnits="userSpaceOnUse" width="250" height="250">
+      <rect width="250" height="250" fill="#FFF8F0"/>
+      <g opacity="0.25">
+        <path d="M50,80 Q40,60 50,40 Q55,50 65,45 Q55,60 60,70Z" fill="#D4723C"/>
+        <line x1="50" y1="80" x2="50" y2="100" stroke="#8B6914" stroke-width="1"/>
+      </g>
+      <g opacity="0.2" transform="translate(140,30) rotate(25)">
+        <path d="M30,55 Q22,40 30,25 Q34,33 42,30 Q34,42 38,50Z" fill="#C4553C"/>
+        <line x1="30" y1="55" x2="30" y2="70" stroke="#8B6914" stroke-width="0.8"/>
+      </g>
+      <g opacity="0.2" transform="translate(180,160) rotate(-15)">
+        <path d="M30,55 Q22,40 30,25 Q34,33 42,30 Q34,42 38,50Z" fill="#E8A040"/>
+        <line x1="30" y1="55" x2="30" y2="70" stroke="#8B6914" stroke-width="0.8"/>
+      </g>
+      <g opacity="0.15" transform="translate(60,180) rotate(40)">
+        <path d="M25,45 Q18,33 25,20 Q28,27 34,24 Q28,34 31,41Z" fill="#D4723C"/>
+      </g>
+      <g opacity="0.18" transform="translate(100,120)">
+        <circle cx="8" cy="8" r="3" fill="#C4553C"/>
+        <circle cx="220" cy="90" r="2" fill="#E8A040"/>
+      </g>
+    </pattern>
+  </defs>
+  <rect width="800" height="800" fill="url(#autumn)"/>
+</svg>

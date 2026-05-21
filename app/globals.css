@@ -11,6 +11,8 @@
   --soft-brown: #C4A882;
   --parchment: #F5E6D3;
   --rose-dust: #D4A5A5;
+  --warm-brown: #8B6914;
+  --ink: #2C2C2C;
 }
 
 @theme inline {
@@ -24,6 +26,8 @@
   --color-soft-brown: var(--soft-brown);
   --color-parchment: var(--parchment);
   --color-rose-dust: var(--rose-dust);
+  --color-warm-brown: var(--warm-brown);
+  --color-ink: var(--ink);
   --font-caveat: var(--font-caveat);
   --font-indie-flower: var(--font-indie-flower);
   --font-kalam: var(--font-kalam);
@@ -54,6 +58,20 @@ body {
 .pattern-lines {
   background-image: linear-gradient(currentColor 1px, transparent 1px);
   background-size: 20px 20px;
+}
+
+/* Card editor utilities */
+.shadow-vintage {
+  box-shadow: 2px 3px 8px rgba(0, 0, 0, 0.15), 0 1px 3px rgba(139, 105, 20, 0.1);
+}
+
+@keyframes cursor-blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
+}
+
+.animate-cursor-blink {
+  animation: cursor-blink 1s step-end infinite;
 }
 
 /* Scrollbar styling */
