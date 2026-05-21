@@ -6,11 +6,13 @@ import { PhotoElementView } from "./elements/PhotoElementView";
 import { TextElementView } from "./elements/TextElementView";
 import { StickerElementView } from "./elements/StickerElementView";
 import { DecorationElementView } from "./elements/DecorationElementView";
+import { CollageElementView } from "./elements/CollageElementView";
 import {
   PhotoElement,
   TextElement,
   StickerElement,
   DecorationElement,
+  CollageElement,
 } from "@/types/board";
 
 export function BoardCanvas() {
@@ -74,6 +76,9 @@ export function BoardCanvas() {
           )}
           {el.type === "decoration" && (
             <DecorationElementView element={el as DecorationElement} />
+          )}
+          {el.type === "collage" && (
+            <CollageElementView element={el as CollageElement} />
           )}
         </DraggableElement>
       ))}

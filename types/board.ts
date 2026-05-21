@@ -1,4 +1,4 @@
-export type ElementType = "photo" | "text" | "sticker" | "decoration";
+export type ElementType = "photo" | "text" | "sticker" | "decoration" | "collage";
 
 export type DecorationVariant =
   | "washi-tape"
@@ -47,11 +47,30 @@ export interface DecorationElement extends BaseElement {
   src: string;
 }
 
+export interface CollageSlot {
+  id: string;
+  x: number;
+  y: number;
+  width: number;
+  height: number;
+  src?: string;
+}
+
+export interface CollageElement extends BaseElement {
+  type: "collage";
+  templateId: string;
+  slots: CollageSlot[];
+  gap: number;
+  borderRadius: number;
+  backgroundColor: string;
+}
+
 export type BoardElement =
   | PhotoElement
   | TextElement
   | StickerElement
-  | DecorationElement;
+  | DecorationElement
+  | CollageElement;
 
 export interface BoardBackground {
   type: "color" | "pattern";

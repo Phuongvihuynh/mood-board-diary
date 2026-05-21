@@ -10,6 +10,7 @@ import {
   TextElement,
   StickerElement,
   DecorationElement,
+  CollageElement,
 } from "@/types/board";
 import { MAX_UNDO_STEPS, CANVAS_WIDTH, CANVAS_HEIGHT } from "@/lib/constants";
 
@@ -28,7 +29,7 @@ interface BoardState {
   selectElement: (id: string | null) => void;
 
   // Elements
-  addElement: (element: Omit<PhotoElement, "id" | "zIndex"> | Omit<TextElement, "id" | "zIndex"> | Omit<StickerElement, "id" | "zIndex"> | Omit<DecorationElement, "id" | "zIndex">) => string;
+  addElement: (element: Omit<PhotoElement, "id" | "zIndex"> | Omit<TextElement, "id" | "zIndex"> | Omit<StickerElement, "id" | "zIndex"> | Omit<DecorationElement, "id" | "zIndex"> | Omit<CollageElement, "id" | "zIndex">) => string;
   updateElement: (id: string, updates: Partial<BoardElement>) => void;
   deleteElement: (id: string) => void;
   duplicateElement: (id: string) => void;
